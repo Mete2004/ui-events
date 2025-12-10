@@ -27,9 +27,32 @@ designLink.addEventListener('animationend', jumpHandler)
 
 // Stap 1: querySelector
 // let scaleLink = document.querySelector...
+let scaleLink = document.querySelector('a[href="#frontend"]')
 
 // Stap 2: addEventListener
 // scaleLink.addEventListener...
+scaleLink.addEventListener('click', groei)
 
 // Stap 3: (Callback functie met) classList (.toggle(), .add(), etc.)
 // scaleLink.classList.toggle...
+function groei() {
+  scaleLink.classList.toggle('grow')
+}
+
+
+let translateLink = document.querySelector('a[href="#and"]')
+
+translateLink.addEventListener('click', schuif)
+
+function schuif() {
+  translateLink.classList.toggle('move')
+}
+
+
+let shakeLink = document.querySelector('a[href="#development"]')
+
+shakeLink.addEventListener('click', schud)
+
+function schud() {
+  shakeLink.classList.toggle('shake')
+}
