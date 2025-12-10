@@ -51,7 +51,7 @@ function schuif() {
 
 let shakeLink = document.querySelector('a[href="#development"]')
 
-shakeLink.addEventListener('click', schud)
+shakeLink.addEventListener('dblclick', schud)
 
 function schud() {
   shakeLink.classList.toggle('shake')
