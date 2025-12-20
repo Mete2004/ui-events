@@ -157,3 +157,15 @@ a[href="#design"] {
     transform: rotate(5deg); 
   }
 }
+
+.change{
+  animation-name: verander;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-duration: 1s;
+}
+
+@keyframes verander {
+  from {background-color: red;}
+  to {background-color: yellow;}
+}

@@ -56,3 +56,13 @@ shakeLink.addEventListener('dblclick', schud)
 function schud() {
   shakeLink.classList.toggle('shake')
 }
+
+
+
+let aandachtLink = document.querySelector('a[href="#sprint-5"]')
+
+aandachtLink.addEventListener('focus', verander)
+
+function verander() {
+  aandachtLink.classList.toggle('change')
+}
