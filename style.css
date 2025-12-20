@@ -158,14 +158,22 @@ a[href="#design"] {
   }
 }
 
-.change{
-  animation-name: verander;
+.changecolor{
+  animation-name: veranderkleur;
   animation-iteration-count: 1;
   animation-timing-function: linear;
   animation-duration: 1s;
 }
 
-@keyframes verander {
+@keyframes veranderkleur {
   from {background-color: red;}
   to {background-color: yellow;}
 }
+
+.changetekst{
+  animation-name: verandertekst;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-duration: 1s;
+}
+

@@ -61,8 +61,23 @@ function schud() {
 
 let aandachtLink = document.querySelector('a[href="#sprint-5"]')
 
-aandachtLink.addEventListener('focus', verander)
+aandachtLink.addEventListener('focus', veranderkleur)
 
-function verander() {
-  aandachtLink.classList.toggle('change')
+function veranderkleur() {
+  aandachtLink.classList.toggle('changecolor')
+}
+
+
+let hoverLink = document.querySelector('a[href="#fix"]')
+
+hoverLink.addEventListener('mouseover', verandertekst);
+
+hoverLink.addEventListener('mouseout', veranderTerug);
+
+function verandertekst() {
+  hoverLink.textContent = 'Gevonden!';
+}
+
+function veranderTerug() {
+  hoverLink.textContent = 'Fix';
 }
