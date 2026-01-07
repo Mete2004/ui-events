@@ -81,3 +81,28 @@ function verandertekst() {
 function veranderTerug() {
   hoverLink.textContent = 'Fix';
 }
+
+
+let draaiLink = document.querySelector('a[href="#the"]')
+
+draaiLink.addEventListener('mouseout', draaiknop);
+
+function draaiknop() {
+  draaiLink.classList.toggle('turnbutton')
+}
+
+
+let flipLink = document.querySelector('a[href="#flow"]')
+
+flipLink.addEventListener('mousedown', flipknop);
+
+flipLink.addEventListener('mouseup', flipterugknop)
+
+function flipknop() {
+  flipLink.classList.toggle('flipbutton')
+}
+
+function flipterugknop() {
+  flipLink.classList.toggle('flipbackbutton')
+}
+

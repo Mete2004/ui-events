@@ -177,3 +177,50 @@ a[href="#design"] {
   animation-duration: 1s;
 }
 
+
+.turnbutton{
+  animation-name: draaibutton;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-duration: 1s; 
+}
+
+@keyframes draaibutton{
+  100%{ 
+    transform: rotate(90deg); 
+  }
+}
+
+.flipbutton{
+  animation-name: flipknop;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-duration: 1s; 
+  animation-fill-mode: forwards;
+}
+
+@keyframes flipknop{
+  0%{ 
+    transform: rotateY(0deg); 
+  }
+ 100%{ 
+    transform: rotateY(180deg); 
+  }
+}
+
+.flipbackbutton{
+  animation-name: flipterugknop;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-duration: 1s; 
+}
+
+
+@keyframes flipterugknop{
+  0%{ 
+    transform: rotateY(180deg); 
+  }
+  100%{ 
+    transform: rotateY(0deg); 
+  }
+}
