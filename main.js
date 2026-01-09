@@ -106,3 +106,60 @@ function flipterugknop() {
   flipLink.classList.toggle('flipbackbutton')
 }
 
+
+let keyUpLink = document.querySelector('a[href="#user"]')
+
+keyUpLink.addEventListener('keyup', kleurveranderen);
+
+function kleurveranderen(event) {
+  if (event.key === 'a') {
+    keyUpLink.style.backgroundColor = 'red';
+  }
+}
+
+
+let blowupLink = document.querySelector('a[href="#interface"]')
+
+blowupLink.addEventListener('keydown', opblazen);
+
+function opblazen () {
+  blowupLink.classList.add('blowup')
+  blowupLink.classList.remove('deflate')
+}
+
+blowupLink.addEventListener('keyup', leeglopen);
+
+function leeglopen () {
+  blowupLink.classList.add('deflate')
+  blowupLink.classList.remove('blowup')
+}
+
+
+let tekstLink = document.querySelector('a[href="#events"]')
+
+let fontSize = 32
+
+tekstLink.addEventListener('wheel', scrollGroterOfKleiner);
+
+function scrollGroterOfKleiner(event) {
+  if (event.deltaY < 0) {   
+    fontSize += 1
+  } else {                   
+    fontSize -= 1
+  }
+  tekstLink.style.fontSize = fontSize + 'px'
+}
+
+
+let interactionLink = document.querySelector('a[href="#interaction"]')
+
+interactionLink.addEventListener('mousemove', volgmuis) 
+
+function volgmuis(event) {
+  let x = event.offsetX
+  let y = event.offsetY
+  interactionLink.style.setProperty(
+    'background',
+    `radial-gradient(circle at ${x}px ${y}px, #ff0, #000)`
+  )
+}
